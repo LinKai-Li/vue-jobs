@@ -83,34 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "1c7a",
-      "title": "Beau Mckee",
-      "type": "Part-Time",
-      "location": "Veritatis minim saep",
-      "description": "Consequatur minima ",
-      "salary": "$175K - $200K",
-      "company": {
-        "name": "George Owens LLC",
-        "description": "Provident in numqua",
-        "contactEmail": "mirumirugo@mailinator.com",
-        "contactPhone": "+1 (506) 193-7173"
-      }
-    },
-    {
-      "id": "28ed",
-      "title": "",
-      "type": "Full-Time",
-      "location": "Ex consequat Possim",
-      "description": "Distinctio Ducimus",
-      "salary": "Over $200K",
-      "company": {
-        "name": "Ballard Farrell LLC",
-        "description": "Odit dolore reiciend",
-        "contactEmail": "fezyjizef@mailinator.com",
-        "contactPhone": "+1 (907) 494-3979"
-      }
     }
   ]
 }
