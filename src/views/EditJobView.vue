@@ -31,7 +31,7 @@ const state = reactive({
 const toast = useToast();
 
 const handleSubmit = async () => {
-  const newJob = {
+  const updatedJob = {
     title: form.title,
     type: form.type,
     location: form.location,
@@ -46,8 +46,8 @@ const handleSubmit = async () => {
   };
 
   try {
-    const response = await axios.post("/api/jobs", newJob);
-    toast.success("Job Added Successfully");
+    const response = await axios.put(`/api/jobs/${jobId}`, updatedJob);
+    toast.success("Job Updated Successfully");
     router.push(`/jobs/${response.data.id}`);
   } catch (error) {
     console.error("Error fetching job", error);
@@ -65,10 +65,10 @@ onMounted(async () => {
     form.description = state.job.description;
     form.salary = state.job.salary;
     form.location = state.job.location;
-    form.company.name = state.company.name;
-    form.company.description = state.company.description;
-    form.company.contactEmail = state.company.contactEmail;
-    form.company.contactPhone = state.company.contactPhone;
+    form.company.name = state.job.company.name;
+    form.company.description = state.job.company.description;
+    form.company.contactEmail = state.job.company.contactEmail;
+    form.company.contactPhone = state.job.company.contactPhone;
   } catch (error) {
     console.error("Error fetching job", error);
   } finally {
@@ -110,7 +110,7 @@ onMounted(async () => {
             >
             <input
               type="text"
-              v-model="form.name"
+              v-model="form.title"
               id="name"
               name="name"
               class="border rounded w-full py-2 px-3 mb-2"

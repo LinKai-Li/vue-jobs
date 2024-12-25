@@ -79,7 +79,7 @@ const handleSubmit = async () => {
             >
             <input
               type="text"
-              v-model="form.name"
+              v-model="form.title"
               id="name"
               name="name"
               class="border rounded w-full py-2 px-3 mb-2"
